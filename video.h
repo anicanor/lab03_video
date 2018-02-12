@@ -1,7 +1,9 @@
+//video.h
+//Aaron Nicnaor
+//anicanor
 
 #ifndef VIDEO_H
 #define VIDEO_H
-// put any includes here (such as #include <iostream>)
 
 #include<iostream>
 #include<string>
@@ -11,17 +13,17 @@ using namespace std;
 class Video
 {
     public:
-        // public member functions go here
-        Video (string Name, string url, string comment, float number, int star);
+        Video (string Name, string url, string comment, float length, int rating);
         void print();
+        bool ratingCheck(Video *tester);
+        bool lengthCheck(Video *tester);
+        bool titleCheck(Video *tester);
     private:
-        // member variables go here
-        // member function used only by other member functions go here
         string m_name, m_url, m_comment;
-        float m_number;
-        int m_star;
+        float m_length;
+        int m_rating;
 
 
-}; // don't forget this ;
+};
 
 #endif
