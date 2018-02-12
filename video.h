@@ -25,5 +25,5 @@ class Video
 
 
 };
-
+//Look at the cpp file if you want info on what these do
 #endif
