@@ -9,6 +9,7 @@
 
 using namespace std;
 
+//Used to set up the Video's info
 Video::Video(string name, string url, string comment, float length, int rating){
     
     m_name = name;
@@ -19,10 +20,11 @@ Video::Video(string name, string url, string comment, float length, int rating){
 
 }
 
+//Prints out the Video's info
 void Video::print(){
     
     cout << m_name << ", " << m_url << ", " << m_comment << ", " << m_length << ", ";
-    for(int i = 1; i < m_rating; i++){
+    for(int i = m_rating; i > 0; i--){
         
         cout << "*";
 
@@ -31,18 +33,19 @@ void Video::print(){
 
 }
 
+//Used to compare one video object's rating with another's rating
 bool Video::ratingCheck(Video *tester){
     
     return m_rating < tester->m_rating;
 
 }
-
+//Used to compare one video object's length with another's length
 bool Video::lengthCheck(Video *tester){
 
     return m_length > tester->m_length;
 
 }
-
+//Used to compare one video object's name with another's name
 bool Video::titleCheck(Video *tester){
     
     return m_name > tester->m_name;
